@@ -1,0 +1,104 @@
+/*
+* buttons
+*/
+
+.fixed-size{
+	width: 480px;
+	height: 790px;
+}
+
+.container-mobile{
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0;
+
+	// colores de containers
+	&.purple{
+		@include gradient-y(#5509C2, #3C0092, 0%, 100%);
+	}
+	&.green{
+		@include gradient-y(#269800, #1B6C00, 0%, 100%);
+	}
+	&.red{
+		@include gradient-y(#D60000, #A50002, 0%, 100%);
+	}
+
+	nav.main{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 10vh;
+		background-color: transparentize($white, .9);
+		li{
+			a{
+				font-size: $font-size-lg * 1.5;
+				padding: .8rem;
+				color: $white;
+			}
+
+		}
+	}
+	
+	.organic{
+		height: 90vh;
+		padding: 1.52rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		
+		p.question{
+			font-weight: 700;
+			color: $white;
+			font-size: $font-size-xl;
+			line-height: 110%;
+		}
+
+		.options{
+
+			.btn-option,
+			.btn{
+				white-space: pre-wrap;
+			}
+			.btn-option{
+				width: 100%;
+				margin-bottom: 1rem;
+				border-radius: 1.75rem !important;
+				font-size: 1.1rem;
+				
+				vertical-align: middle;
+
+				background-color: transparent;
+				border: 2px solid $white;
+				color: $white;
+				font-weight: 400;
+			}
+		}
+	}
+
+
+
+	.btn-row{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.btn{
+		mix-blend-mode: screen;
+		display: flex-item;
+		
+		&.btn-round{
+			@include size(6rem, 6rem);
+			border-radius: 50% !important;
+			padding: 1.3rem 0px;
+    		font-size: 2.5rem;
+    		font-weight: 400;
+		}
+
+
+	}
+}
+
+
