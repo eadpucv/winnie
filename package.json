@@ -1,0 +1,30 @@
+{
+  "name": "winnie",
+  "version": "1.0.0",
+  "description": "a css framework for the WIN project, heavily based on bootstrap",
+  "main": "/pages/index.html",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "sass": "^1.0.0-beta.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "kss": "^3.0.0-beta.18"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/eadpucv/winnie.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "mobile",
+    "gui",
+    "framework"
+  ],
+  "author": "Herbert Spencer",
+  "license": "MIT"
+}

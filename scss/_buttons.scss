@@ -1,0 +1,58 @@
+/*
+* buttons
+*/
+
+.container-mobile{
+	width: 480px;
+	height: 790px;
+	display: flex;
+	padding: 3rem;
+	flex-direction: column-reverse;
+	&.purple{
+		@include gradient-y(#5509C2, #3C0092, 0%, 100%);
+	}
+	&.green{
+		@include gradient-y(#269800, #1B6C00, 0%, 100%);
+	}
+	&.red{
+		@include gradient-y(#D60000, #A50002, 0%, 100%);
+	}
+	
+
+	.btn-row{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.btn{
+		mix-blend-mode: screen;
+		display: flex-item;
+		
+		&.btn-round{
+			@include size(8rem, 8rem);
+			border-radius: 50% !important;
+			padding: 1.9rem 0px;
+			font-size: 3rem;
+			font-weight: 800;
+		}
+
+		&.btn-option{
+			@include size(100%, 4rem);
+			white-space: wrap !important;
+			margin-bottom: 1rem;
+			border-radius: 2rem !important;
+			font-size: 1.2rem;
+			padding: 1.3rem 1rem;
+			background-color: transparentize($white, .5);
+			color: $black;
+			font-weight: 700;
+		}
+	}
+}
+
+p.question{
+	font-weight: 700;
+	color: $white;
+	font-size: 3rem;
+	height: 40%;
+}
