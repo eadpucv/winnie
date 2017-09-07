@@ -8,13 +8,16 @@
 }
 
 .container-mobile{
-	height: 100vh;
-	overflow: hidden;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 0;
+	min-height: 100vh;
 
+	.bg-dark{
+		background-color: transparentize($black, .9);
+	}
 	// colores de containers
 	&.purple{
 		@include gradient-y(#5509C2, #3C0092, 0%, 100%);
@@ -26,30 +29,36 @@
 		@include gradient-y(#D60000, #A50002, 0%, 100%);
 	}
 
-	nav.main{
+	nav.main-menu{
+		text-align: right;
+		li{
+			a.nav-link{
+				display: inline-block;
+				color: $white;
+				&:active,
+				&.active{
+					color: $white;
+				}
+			}
+		}
+
+	}
+	nav.top-menu{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		height: 10vh;
-		background-color: transparentize($white, .9);
-		li{
-			a{
-				font-size: $font-size-lg * 1.5;
-				padding: .8rem;
-				color: $white;
-			}
 
+		button{
+			font-size: $font-size-lg * 1.5;
+			padding: .8rem;
+			color: $white;
 		}
 	}
 	
-	.organic{
-		height: 90vh;
-		padding: 1.52rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		
-		p.question{
+
+
+	p.question{
+			padding: 0 1.52rem;
 			font-weight: 700;
 			color: $white;
 			font-size: $font-size-xl;
@@ -57,7 +66,7 @@
 		}
 
 		.options{
-
+			padding: 0 1.52rem;
 			.btn-option,
 			.btn{
 				white-space: pre-wrap;
@@ -76,11 +85,10 @@
 				font-weight: 400;
 			}
 		}
-	}
-
 
 
 	.btn-row{
+		padding: 1.52rem;
 		display: flex;
 		justify-content: space-between;
 	}
