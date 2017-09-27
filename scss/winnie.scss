@@ -21,16 +21,16 @@ $wf-path: "../fonts" !default;								// webfont path
 
 // Reset and dependencies
 @import "../node_modules/bootstrap/scss/normalize.scss";
-@import "../node_modules/bootstrap/scss/print.scss";
+//@import "../node_modules/bootstrap/scss/print.scss";
 
 // Core CSS
 @import "../node_modules/bootstrap/scss/reboot.scss";
 @import "../node_modules/bootstrap/scss/type.scss";
-@import "../node_modules/bootstrap/scss/images.scss";
-@import "../node_modules/bootstrap/scss/code.scss";
+//@import "../node_modules/bootstrap/scss/images.scss";
+//@import "../node_modules/bootstrap/scss/code.scss";
 @import "../node_modules/bootstrap/scss/grid.scss";
-@import "../node_modules/bootstrap/scss/tables.scss";
-@import "../node_modules/bootstrap/scss/forms.scss";
+//@import "../node_modules/bootstrap/scss/tables.scss";
+//@import "../node_modules/bootstrap/scss/forms.scss";
 
 @import "../node_modules/bootstrap/scss/buttons.scss";
 @import "custom";

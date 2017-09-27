@@ -1,7 +1,7 @@
 {
   "name": "winnie",
   "version": "1.0.0",
-  "description": "a css framework for the WIN project, heavily based on bootstrap",
+  "description": "a css framework for the WIN project, heavily based on bootstrap 4.0.0",
   "main": "/pages/index.html",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",

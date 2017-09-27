@@ -12,20 +12,6 @@
   font-style: normal;
 }
 
-
-/*
-@font-face {
-  font-family: 'win-icons';
-  src:  url('../fonts/win-icons/win-icons.eot?89qyaf');
-  src:  url('../fonts/win-icons/win-icons.eot?89qyaf#iefix') format('embedded-opentype'),
-    url('../fonts/win-icons/win-icons.ttf?89qyaf') format('truetype'),
-    url('../fonts/win-icons/win-icons.woff?89qyaf') format('woff'),
-    url('../fonts/win-icons/win-icons.svg?89qyaf#win-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
-
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'win-icons' !important;
