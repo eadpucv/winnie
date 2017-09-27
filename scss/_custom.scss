@@ -78,8 +78,7 @@
 			}
 			.btn-option{
 				width: 100%;
-				margin-bottom: 1rem;
-				border-radius: 1.75rem !important;
+				margin-bottom: 1.5rem;
 				background-color: transparent;
 				border: 2px solid $white;
 				color: $white;
@@ -92,20 +91,18 @@
 		padding: 0 1.5rem 1.5rem 1.5rem;
 		display: flex;
 		justify-content: space-between;
+
+		.btn{
+			@include size(8rem, 6rem);
+			padding: 1.3rem 0px;
+    		font-size: 2.5rem;
+    		font-weight: 400;
+		}
 	}
 
 	.btn{
 		mix-blend-mode: screen;
 		display: flex-item;
-		
-		&.btn-round{
-			@include size(6rem, 6rem);
-			border-radius: 50% !important;
-			padding: 1.3rem 0px;
-    		font-size: 2.5rem;
-    		font-weight: 400;
-		}
-
 
 	}
 }
