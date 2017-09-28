@@ -21,10 +21,10 @@
 </head>
 
 <body>
-  <div class="container container-mobile purple">
 
-  
-    <!-- menu -->
+<div class="wrapper-mobile purple">
+  <div class="nav-mobile">
+   <!-- menu collapse -->
     <div class="collapse" id="mainMenu">
       <div class="bg-dark p-4">
         <nav class='nav flex-column main-menu'>
@@ -35,32 +35,42 @@
       </div>
     </div>
 
+    <!-- nav bar -->
     <nav class="navbar navbar-dark bg-dark top-menu">
       <button class="navbar-toggler" type="button" aria-label="back"><i class='icon-arrow-left'></i></button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
         <i class='icon-more-vertical'></i>
       </button>
     </nav>
-
-      <!-- la pregunta -->
-      <p class="question">
-        ¿Puedo decir lo que pienso y quiero?
-      </p>
-
-      <!-- las opciones secundarias -->
-      <div class="options">
-        <a href="index.html" class="btn btn-option">lo hago sin dificultad</a>
-        <a href="green.html" class="btn btn-option">lo hago si me dan la oportunidad de escribir una frase muy larga</a>
-        <a href="red.html" class="btn btn-option">lo hago con apoyo</a>
-      </div>
-
-      <!-- las opciones primarias -->
-      <div class="btn-row">
-        <a href="#" class="btn btn-success">sí</a>
-        <a href="#" class="btn btn-danger">no</a>
-      </div>
+    </div>
     
 
+  <div class="container container-mobile">
+
+    <!-- la pregunta -->
+    <p class="question">
+      ¿Puedo decir lo que pienso y quiero?
+    </p>
+
+    <!-- las opciones secundarias -->
+    <div class="options">
+      <a href="index.html" class="btn btn-option">lo hago sin dificultad</a>
+      <a href="green.html" class="btn btn-option">lo hago si me dan la oportunidad de escribir una frase muy larga</a>
+      <a href="red.html" class="btn btn-option">lo hago con apoyo</a>
+    </div>
+
+    <!-- las opciones primarias -->
+
+    <div class="row btn-row">
+     <div class="col">
+        <a href="#" class="btn btn-success btn-xl btn-block ">sí</a>
+      </div>
+      <div class="col">
+        <a href="#" class="btn btn-danger btn-xl  btn-block ">no</a>
+      </div>
+    </div>
   </div> 
+</div>
+  
 </body>
 </html>

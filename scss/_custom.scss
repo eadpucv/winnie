@@ -7,12 +7,7 @@
 	height: 790px;
 }
 
-.container-mobile{
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 0;
+.wrapper-mobile{
 	min-height: 100vh;
 
 	.bg-dark{
@@ -29,6 +24,9 @@
 		@include gradient-y(#D60000, #A50002, 0%, 100%);
 	}
 
+}
+
+.nav-mobile{
 	nav.main-menu{
 		text-align: right;
 		li{
@@ -59,11 +57,18 @@
 			color: $white;
 		}
 	}
-	
+}
 
+.container-mobile{
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	padding-bottom: 3rem;
 
 	p.question{
-			padding: 1.5rem 1.5rem 0 1.5rem;
+			padding: 1.5rem 0;
 			font-weight: 700;
 			color: $white;
 			font-size: $font-size-xl;
@@ -71,7 +76,7 @@
 		}
 
 		.options{
-			padding: 0 1.5rem;
+			//padding: 0 1.5rem;
 			.btn-option,
 			.btn{
 				white-space: pre-wrap;
@@ -88,23 +93,16 @@
 
 
 	.btn-row{
-		padding: 0 1.5rem 1.5rem 1.5rem;
-		display: flex;
-		justify-content: space-between;
-
 		.btn{
-			@include size(8rem, 6rem);
-			padding: 1.3rem 0px;
-    		font-size: 2.5rem;
+			mix-blend-mode: screen;
     		font-weight: 400;
 		}
 	}
-
-	.btn{
-		mix-blend-mode: screen;
-		display: flex-item;
-
-	}
 }
 
+$xl-size:	2;
 
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg * $xl-size, $btn-padding-x-lg * $xl-size, $font-size-lg * $xl-size, $btn-border-radius-lg / $xl-size);
+}
