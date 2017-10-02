@@ -1,12 +1,11 @@
 /*
-* buttons
+* custom stuff
+* to do:
+*     break file
 */
 
-.fixed-size{
-	width: 480px;
-	height: 790px;
-}
 
+/* utilities */ 
 .purple-bg{
 	@include gradient-y(#5509C2, #3C0092, 0%, 100%);
 }
@@ -17,6 +16,12 @@
 	@include gradient-y(#D60000, #A50002, 0%, 100%);
 }
 
+.force-bottom{
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	right: 30px;
+}
 
 .body-mobile{
 	width: 100%;
@@ -50,7 +55,14 @@
 }
 
 .nav-mobile{
-	nav.navbar{height: 10vh;}
+	nav.navbar{
+		height: 10vh;
+		.navbar-brand{
+			color: transparentize($white, .2);
+		    font-weight: 200;
+		    margin-top: 7px;
+		}
+	}
 	nav.main-menu{
 		text-align: right;
 
@@ -76,7 +88,8 @@
 		flex-direction: row;
 		justify-content: space-between;
 
-		button{
+		button,
+		a.btn{
 			font-size: $font-size-lg;
 			padding: .8rem;
 			color: $white;
@@ -85,56 +98,118 @@
 }
 
 .container-mobile{
-	height: 90vh;
-	padding-right: 30px;
-    padding-left: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	
-	p.question{
-		font-weight: 700;
+	height: 90vh;
+	// increment default margin (half gutter)
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.dialogue{
+	display: flex-item;
+	align-self: flex-start;
+	font-weight: 700;
+	color: $white;
+	font-size: $font-size-xl;
+	line-height: 110%;
+	margin: 30px 0;
+
+	.answer{
 		color: $white;
-		font-size: $font-size-xl;
-		line-height: 110%;
-		margin: 30px 0;
+		font-size: $font-size-xl * 2;
+		line-height: 150%;
+		font-weight: 100;
 	}
 
-	.options{
-			//padding: 0 1.5rem;
-			.btn-option,
-			.btn{
-				white-space: pre-wrap;
-			}
-			.btn-option{
-				width: 100%;
-				margin-bottom: 15px;
-				background-color: transparent;
-				border: 2px solid $white;
-				color: $white;
-				font-weight: 400;
-				&:last-child{
-					margin-bottom: 0;
-				}
-			}
-		}
+	.btn-talk{
+		color: transparentize($white, .2);
+		font-size: 18px;
+		margin: 0 0 0 7px;
+		background-color: transparentize($black, .8);
+		padding: 0px 12px;
+		display: inline-block;
+		height: 32px;
+		line-height: 180%;
+		border: 2px solid transparentize($white, .8);
+		clear: right;
+	}
+}
 
-		.btn-row{
-			margin-top: 30px;
+.options{
+	display: flex-item;
+	.btn-option,
+	.btn{
+			white-space: pre-wrap;
+		}
+	.btn-option{
+		width: 100%;
+		margin-bottom: 15px;
+		background-color: transparent;
+		border: 2px solid transparentize($white, .8);
+		color: $white;
+		font-weight: 400;
+		&:last-child{
 			margin-bottom: 0;
-			.col{
-				width: 50%;
-			}
-			.btn{
-				mix-blend-mode: screen;
-				font-weight: 400;
-			}
+		}
+
+		&.selected{
+			background-color: transparentize($black, .7);
+			border: 2px solid transparentize($white, .2);
+		}
+
+		&.disabled{
+			opacity: 0.3;
+			filter: alpha(opacity=30); /* For IE8 and earlier */
+		}
+
+		&.continue{
+			mix-blend-mode: tint;
+			background-color: $green;
 		}
 	}
+}
 
-	$xl-size:	2;
+.menu,
+.btn-row{
+	display: flex-item;
+	align-self: flex-end;
+	margin-top: 30px;
+	margin-bottom: 0;
+	
+	.col{
+		width: 50%;
+	}
+	.btn{
+		mix-blend-mode: screen;
+		font-weight: 400;
+	}
+}
 
-	.btn-xl {
-  // line-height: ensure even-numbered height of button next to large input
-  @include button-size($btn-padding-y-lg * $xl-size, $btn-padding-x-lg * $xl-size, $font-size-lg * $xl-size, $btn-border-radius-lg / $xl-size);
+
+.menu{
+	.mb{
+		margin-bottom: 30px;
+	}
+	.btn{
+		white-space: normal;
+		line-height: 50%;
+		i[class^="icon-"], i[class*=" icon-"]{
+			display: block !important;
+			clear: both;
+		}
+
+		span{
+			font-size: $font-size-sm;
+			margin-left: -9%;
+		}
+	}
+}
+
+$xl-mult:	2; // xl multiplier factor
+
+.btn-xl {
+// line-height: ensure even-numbered height of button next to large input
+@include button-size($btn-padding-y-lg * $xl-mult, $btn-padding-x-lg * $xl-mult, $font-size-lg * $xl-mult, $btn-border-radius-lg / $xl-mult);
 }

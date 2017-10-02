@@ -8,7 +8,7 @@
   <meta name='author' content='WIN'>
   <!-- <link rel='icon' href='../../favicon.ico'> -->
 
-  <title>WIN lo que necesitas</title>
+  <title>Sin Límites</title>
 
   <!-- Bootstrap core CSS -->
   <link href='../css/winnie.css' rel='stylesheet'>
@@ -23,53 +23,58 @@
 <body class='body-mobile'>
   <div class='wrapper-mobile'>
 
-  <div class='nav-mobile purple-bg'>
-    <!-- menu collapse -->
-    <div class='collapse' id='mainMenu'>
-      <div class='bg-dark p-4'>
-        <nav class='nav flex-column main-menu'>
-          <li class='nav-item'><a class='nav-link' href='#'>mi cuenta <i class='icon-user'></i></a></li>
-          <li class='nav-item'><a class='nav-link' href='#'>accesibilidad <i class='icon-headphones'></i></a></li>
-          <li class='nav-item'><a class='nav-link' href='#'>configuración <i class='icon-box'></i></a></li>
-        </nav>
+    <div class='nav-mobile purple-bg'>
+      <!-- menu collapse -->
+      <div class='collapse' id='mainMenu'>
+        <div class='bg-dark p-4'>
+          <nav class='nav flex-column main-menu'>
+            <li class='nav-item'><a class='nav-link' href='#'>mi cuenta <i class='icon-user'></i></a></li>
+            <li class='nav-item'><a class='nav-link' href='#'>accesibilidad <i class='icon-headphones'></i></a></li>
+            <li class='nav-item'><a class='nav-link' href='#'>configuración <i class='icon-box'></i></a></li>
+          </nav>
+        </div>
       </div>
-    </div>
-    <!-- nav bar -->
-    <nav class='navbar navbar-dark bg-dark top-menu '>
-      <button class='navbar-toggler' type='button' aria-label='back'><i class='icon-arrow-left'></i></button>
-      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#mainMenu' aria-controls='mainMenu' aria-expanded='false' aria-label='Toggle navigation'>
+      <!-- nav bar -->
+      <nav class='navbar navbar-dark bg-dark top-menu '>
+        <a class="navbar-brand" href="#">Bienvenido a Sin Límites!</a>
+       <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#mainMenu' aria-controls='mainMenu' aria-expanded='false' aria-label='Toggle navigation'>
         <i class='icon-more-vertical'></i>
       </button>
     </nav>
   </div>
-    
+
 
   <div class='container container-mobile purple-bg'>
 
     <!-- la pregunta -->
-    <p class='question'>
-      ¿Puedo decir lo que pienso y quiero?
+    <p class='dialogue'>
+      Hola Gerardo.<br>
+      ¿Qué quieres hacer hoy?
+      <a href='#' class='btn btn-talk'><i class='icon-play'></i></a>
     </p>
 
-    <!-- las opciones secundarias -->
-    <div class='options'>
-      <a href='index.html' class='btn btn-option'>lo hago sin dificultad</a>
-      <a href='green.html' class='btn btn-option'>lo hago si me dan la oportunidad de escribir una frase muy larga</a>
-      <a href='red.html' class='btn btn-option'>lo hago con apoyo</a>
+    <!-- las opciones principales -->
+    <div class="menu">
+      <div class='row mb'>
+        <div class="col">
+          <a href='#' class='btn btn-xl btn-block btn-info'><i class='icon-clock'></i><span>Planes</span></a>
+        </div>
+        <div class="col">
+          <a href='#' class='btn btn-xl btn-block btn-danger'><i class='icon-map-pin'></i><span>Lugares</span></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href='#' class='btn btn-xl btn-block btn-success'><i class='icon-comment-circle'></i><span>Amigos</span></a>
+        </div>
+        <div class="col">
+          <a href='q01.html' class='btn btn-xl btn-block btn-warning'><i class='icon-user'></i><span>Perfil</span></a>
+        </div>
+      </div>
     </div>
 
-    <!-- las opciones primarias -->
-
-    <div class='row btn-row'>
-     <div class='col'>
-        <a href='#' class='btn btn-success btn-xl btn-block '>sí</a>
-      </div>
-      <div class='col'>
-        <a href='#' class='btn btn-danger btn-xl  btn-block '>no</a>
-      </div>
-    </div>
   </div> 
 
-  </div> 
+</div> 
 </body>
 </html>
